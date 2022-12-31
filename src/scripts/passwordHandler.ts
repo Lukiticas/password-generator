@@ -20,7 +20,7 @@ const createPassword = (filters: HPCheckboxes, length: number) => {
   if (filters.ICN) newStr += chars.replace(/[^\d+]/g, "");
   if (filters.ICS) newStr += chars.match(/[!@#$%^&*()]/g)?.join("");
 
-  for (let i = 0; i <= length; i++) {
+  for (let i = 0; i < length; i++) {
     const randomNumber = Math.floor(Math.random() * newStr.length);
     newPassword += newStr.substring(randomNumber, randomNumber + 1);
   }
@@ -74,7 +74,7 @@ const passwordHandler = () => {
     const defaultValue = "PASSWORD!";
     const newPassword = createPassword(checkBoxes, radioValue);
 
-    if (radioValue > 0) {
+    if (radioValue > 0 && newPassword) {
       display.classList.add("enabled");
       display.textContent = newPassword;
     } else {
