@@ -42,7 +42,7 @@ const handlePasswordStrength = (level: ColorRange) => {
 
   meterDescripton!.textContent = score[1];
 
-  meterFigure.forEach((el, idx) => {
+  meterFigure.forEach((el: Element, idx: number) => {
     if (idx >= level) return;
     const meterBar = el as HTMLDivElement;
     meterBar.style.backgroundColor = score[0];

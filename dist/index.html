@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/password-generator/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    
+    
+
+    <script src="https://unpkg.com/phosphor-icons" defer></script>
+    
+
+    <title>Password generator | Lucas Matheus</title>
+    <script type="module" crossorigin src="/password-generator/assets/index-ab01cf04.js"></script>
+    <link rel="stylesheet" href="/password-generator/assets/index-15344a7a.css">
+  </head>
+  <body>
+    <header class="header-title">Password Generator</header>
+    <main class="main-wrapper">
+      <section class="app-input">
+        <div class="app-input__display">PASSWORD!</div>
+        <div class="app-input__cp-parent">
+          <i class="ph-copy-simple app-input__cp-parent__cp"></i>
+        </div>
+      </section>
+      <section class="app-settings">
+        <div class="range-wrapper">
+          <div class="range-label">
+            <label class="range-label__label" for="char-length-range"
+              >Character Length</label
+            >
+            <span class="range-label__span-number">10</span>
+          </div>
+          <input
+            class="range"
+            id="char-length-range"
+            type="range"
+            min="0"
+            step="1"
+            max="20"
+            value="10"
+          />
+        </div>
+        <div class="checkbox-menu-wrapper">
+          <label for="UCL" class="include-form-controll"
+            ><input
+              type="checkbox"
+              name="include"
+              class="include-checkboxes"
+              id="UCL"
+              title="include"
+            />
+            <span class="include-dif">Include uppercase Letters</span></label
+          >
+          <label for="LCL" class="include-form-controll"
+            ><input
+              type="checkbox"
+              name="include"
+              class="include-checkboxes"
+              id="LCL"
+              title="include"
+            />
+            <span class="include-dif">Include Lowercase Letters</span></label
+          >
+          <label for="ICN" class="include-form-controll"
+            ><input
+              type="checkbox"
+              name="include"
+              class="include-checkboxes"
+              id="ICN"
+              title="include"
+            />
+            <span class="include-dif">Include Numbers</span></label
+          >
+          <label for="ICS" class="include-form-controll"
+            ><input
+              type="checkbox"
+              name="include"
+              class="include-checkboxes"
+              id="ICS"
+              title="include"
+            />
+            <span class="include-dif">Include Symbols</span></label
+          >
+        </div>
+        <div class="meter">
+          <p class="meter__name">Strength</p>
+          <div class="meter__figure">
+            <span class="meter__figure__description"></span>
+            <div class="meter__figure__description--img"></div>
+            <div class="meter__figure__description--img"></div>
+            <div class="meter__figure__description--img"></div>
+            <div class="meter__figure__description--img"></div>
+          </div>
+        </div>
+        <button type="button" class="password-create-button">
+          <p class="password-create-button__title">Generate</p>
+          <span class="password-create-button__arrow"
+            ><i class="ph-arrow-right-bold"></i
+          ></span>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
